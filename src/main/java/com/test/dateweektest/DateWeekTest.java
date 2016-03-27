@@ -19,20 +19,26 @@ public class DateWeekTest {
 
 
     public static void  main(String[] args) throws IOException {
-        String startDate = null;
-        String endDate = null;
-
-        startDate = getStartDate(3);
-        endDate = getEndDate(3);
-        Date today=new Date();
-        Calendar curr = Calendar.getInstance();
-        System.out.println("calendar hour" + curr.get(Calendar.HOUR_OF_DAY));
-        System.out.println("calendar nowtime" + curr.getTime().getTime()/1000);
-        System.out.println("calendar pasttime" + curr.getTime().getTime()/1000%86400);
-        System.out.println("date nowtime" + today.getTime()/1000);
-        System.out.println("date pasttime" + (today.getTime()/1000) % 86400);
-        System.out.println("startdate" + startDate);
-        System.out.println("endDate" + endDate);
+//        String startDate = null;
+//        String endDate = null;
+//
+//        startDate = getStartDate(3);
+//        endDate = getEndDate(3);
+//        Date today=new Date();
+//        Calendar curr = Calendar.getInstance();
+//        System.out.println("calendar hour" + curr.get(Calendar.HOUR_OF_DAY));
+//        System.out.println("calendar nowtime" + curr.getTime().getTime()/1000);
+//        System.out.println("calendar pasttime" + curr.getTime().getTime()/1000%86400);
+//        System.out.println("date nowtime" + today.getTime()/1000);
+//        System.out.println("date pasttime" + (today.getTime()/1000) % 86400);
+//        System.out.println("startdate" + startDate);
+//        System.out.println("endDate" + endDate);
+        Date date = new Date();
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyyMMdd");
+        int nowDay = Integer.parseInt(formatter.format(date));
+        System.out.println("nowDay" + nowDay);
+        int curTimeSec = (int)(new Date().getTime()/1000);
+        System.out.println("curTimeSec" + curTimeSec);
     }
 
     private static int GetWeekDay(){
