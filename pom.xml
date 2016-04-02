@@ -45,6 +45,21 @@
             <artifactId>spring-context</artifactId>
             <version>3.2.8.RELEASE</version>
         </dependency>
+        <!--<dependency>-->
+            <!--<groupId>com.sun.tools.btrace</groupId>-->
+            <!--<artifactId>btrace-agent</artifactId>-->
+            <!--<version>1.2.3</version>-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+            <!--<groupId>com.sun.tools.btrace</groupId>-->
+            <!--<artifactId>btrace-client</artifactId>-->
+            <!--<version>1.2.3</version>-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+            <!--<groupId>com.sun.tools.btrace</groupId>-->
+            <!--<artifactId>btrace-boot</artifactId>-->
+            <!--<version>1.2.3</version>-->
+        <!--</dependency>-->
         <dependency>
             <groupId>org.mybatis.generator</groupId>
             <artifactId>mybatis-generator-core</artifactId>

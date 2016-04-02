@@ -1,38 +1,19 @@
 package com.test.Btrace;
 
-import java.io.*;
+import java.util.Random;
 
-/**
- * Created by wklmogujie on 16/3/27.
- */
-public class BTraceTest {
-    public static void writeFile(String fileName) throws IOException,InterruptedException {
-        File f = new File(fileName);
-        if(!f.exists()) {
-            f.createNewFile();
-        }
-        DataOutputStream fos = new DataOutputStream(new FileOutputStream(f));
-        fos.writeBytes(fileName);
-        fos.close();
-        Thread.sleep(100);
+    public class BTraceTest {
 
-    }
-
-    public static String readFile(String fileName) throws IOException,InterruptedException {
-        File f = new File(fileName);
-        DataInputStream fis = new DataInputStream(new FileInputStream(f));
-        String re = fis.readLine();
-        fis.close();
-        f.delete();
-        Thread.sleep(100);
-        return re;
-    }
-
-    public static void main(String[] args) throws IOException,InterruptedException{
+    public static void main(String[] args) throws Exception {
+        Random random = new Random();
+        int countMachine = 0;
+        // 计数器
+        Counter counter = new Counter();
         while (true) {
-            String fileName = Integer.toString((int) (Math.random()*100));
-            writeFile(fileName);
-            readFile(fileName);
+            // 每次增加随机值
+            countMachine++;
+            counter.add(random.nextInt(10), countMachine);
+            Thread.sleep(1000);
         }
     }
 }
